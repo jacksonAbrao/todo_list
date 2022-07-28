@@ -8,7 +8,11 @@ class AppModule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: const [],
+      providers: [
+        Provider(
+          create: (_) => Object(),
+        ),
+      ],
       child: const AppWidget(),
     );
   }
