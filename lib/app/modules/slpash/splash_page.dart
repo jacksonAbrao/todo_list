@@ -12,7 +12,7 @@ class SplashPage extends StatelessWidget {
       body: Center(
         child: TextButton(
           onPressed: () => Navigator.of(context).pushNamed('/login'),
-          child: Text('alo'),
+          child: const Text('alo'),
         ),
       ),
     );
