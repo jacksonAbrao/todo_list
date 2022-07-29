@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_list/app/core/database/sqlite_adm_connection.dart';
-import 'package:todo_list/app/modules/slpash/splash_page.dart';
+import 'package:todo_list/app/modules/auth/auth_module.dart';
 
 import 'core/ui/ui_config.dart';
 
@@ -30,7 +30,11 @@ class _AppWidgetState extends State<AppWidget> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: UiConfig.title,
-      home: const SplashPage(),
+      initialRoute: '/splash',
+      debugShowCheckedModeBanner: false,
+      routes: {
+        ...AuthModule().routers,
+      },
       theme: UiConfig.theme,
     );
   }
